@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: barlow_condesed;
+    src: url("./fonts/Barlow_Condensed/BarlowCondensed-Black.ttf");
+}
+
+@font-face {
+    font-family: barlow_semi;
+    src: url("./fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Black.ttf");
+}
+
+@font-face {
+    font-family: bungee_outline;
+    src: url("./fonts/Bungee_Outline/BungeeOutline-Regular.ttf");
+}
+
+@font-face {
+    font-family: bungee_shade;
+    src: url("./fonts/Bungee_Shade/BungeeShade-Regular.ttf");
+}
+
+ul {
+    list-style: none;
+}
+
+span {
+    font-weight: bold;
+}
