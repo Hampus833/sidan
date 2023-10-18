@@ -22,6 +22,64 @@
     src: url("./fonts/Bungee_Shade/BungeeShade-Regular.ttf");
 }
 
+body {
+    margin: 0;
+    background-image: url("./bilder/jimi-hendrix-08.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:
+
+}
+
+main {
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+h1 {
+    font-family: bungee_shade;
+    color: white;
+    font-size: 6vw;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+nav div {
+    background-color: rgba(255, 255, 255, 0.5);
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 1;
+    border-radius: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 2vw;
+    color: black;
+}
+
+h2 {
+    font-family: bungee_outline;
+}
+
 ul {
     list-style: none;
 }
