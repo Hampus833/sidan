@@ -41,8 +41,10 @@ main {
     margin-left: 60px;
     margin-right: 60px;
     margin-top: 60px;
+    margin-bottom: 60px;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
+
 }
 
 h1 {
@@ -165,6 +167,7 @@ section {
     gap: 40px;
     flex-grow: 1;
     flex-basis: 0;
+    margin-right: 20px;
 }
 
 .flex p {
@@ -182,7 +185,6 @@ section {
     grid-template-rows: 1fr;
     row-gap: 10px;
     column-gap: 10px;
-    background-color: transparent;
     flex-basis: 40%;
 }
 
@@ -194,7 +196,36 @@ section {
     background-color: #eecb00;
 }
 
-.grid_one div:nth-child(1)>div {}
+.grid_one>div {
+    position: relative;
+}
+
+.grid_one>div img:nth-of-type(1) {
+    transition: 1s;
+}
+
+.grid_one>div img:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.grid_one>div:hover>img:nth-of-type(1) {
+    opacity: 0;
+}
+
+.grid_one>div:hover>img:nth-of-type(2) {
+    opacity: 1;
+}
+
+.grid_one div:nth-child(1) {
+    grid-column: 1 / 3;
+    background-color: transparent;
+}
 
 .grid_one div:nth-child(2) {
     border-radius: 0 0 0 25px;
@@ -205,43 +236,30 @@ section {
     grid-column: 2 / 3;
 }
 
-#img_one {
-    grid-column: 1 / 3;
-    /*background-image: url("./bilder/are_you_experienced.jpg");*/
-    /*background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 15vw;*/
-    border-radius: 25px 25px 0 0;
-
-}
-
 img {
     width: 100%;
     height: 100%;
+    border-radius: 20px 20px 0 0;
 }
-
-#img_one:hover {
-    background-image: url("./bilder/groupphoto.jpg");
-}
-
 
 .grid_two {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    background-color: transparent;
     margin: 1vw;
     margin-top: 0;
     padding: 5px;
     gap: 5px;
+
     color: yellow;
+    background-color: transparent;
 }
 
 .grid_two div {
-    padding: 25px 10px 25px 10px;
     display: flex;
-    font-size: 1vw;
     align-items: center;
+
+    padding: 25px 10px 25px 10px;
+    font-size: 1vw;
     background-color: purple;
 }
 
@@ -266,6 +284,7 @@ img {
 
     background-image: url("./bilder/chas_chandler.jpg");
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -277,9 +296,68 @@ img {
     border-radius: 20px 20px 0 20px;
 }
 
+.grid_three {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 1vw;
+    margin-top: 0;
+    padding: 5px;
+    gap: 5px;
+
+    background-color: transparent;
+    color: skyblue;
+}
+
+.grid_three div {
+    display: flex;
+    align-items: center;
+
+    padding: 25px 10px 25px 10px;
+    font-size: 1vw;
+    background-color: beige;
+}
+
+.grid_three div p {
+    text-align: left;
+    line-height: 1.4;
+}
+
+.grid_three div:nth-child(1) {
+    grid-column: 1 / span 2;
+    border-radius: 20px 20px 20px 0;
+}
+
+.grid_three div:nth-child(2) {
+    border-radius: 0 20px 20px 20px;
+}
+
+.grid_three div:nth-child(3) {
+    grid-column: 4 / span 2;
+    align-items: end;
+
+    color: grey;
+    border-radius: 0 20px 20px 20px;
+
+    background-image: url("bilder/eddie.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grid_three div:nth-child(4) {
+    border-radius: 20px 20px 0 20px;
+}
+
+footer {
+    margin: 50px 0 0 0;
+    color: white;
+}
+
 @media (max-width: 500px) {
 
     .wrapper {
         flex-direction: column-reverse;
     }
 }
+
+/* Göra om så att varje grid har sin class/id. Ta bordt #img id:n för jag borde kunna komma åt dem
