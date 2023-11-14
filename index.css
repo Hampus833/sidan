@@ -131,7 +131,6 @@ nav div {
     background-color: rgba(255, 255, 255, 0.5);
     flex-grow: 1;
     flex-basis: 0;
-    flex-shrink: 1;
     border-radius: 10px;
     text-align: center;
 }
@@ -193,7 +192,7 @@ section {
 }
 
 .grid_one div {
-    background-color: #eecb00;
+    background-color: rgb(238, 203, 0);
 }
 
 .grid_one>div {
@@ -234,6 +233,16 @@ section {
 .grid_one div:nth-child(3) {
     border-radius: 0 0 25px 0;
     grid-column: 2 / 3;
+}
+
+#blue div:nth-child(2) {
+    background-color: rgb(52, 132, 216);
+    color: beige;
+}
+
+#blue div:nth-child(3) {
+    background-color: rgb(52, 132, 216);
+    color: beige;
 }
 
 img {
@@ -353,11 +362,101 @@ footer {
     color: white;
 }
 
+/* mobile */
+
 @media (max-width: 500px) {
+
+    main {
+        background-color: rgba(0, 0, 0, 0);
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+
+    h1 {
+        font-size: 64px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    img {
+        border-radius: 20px 0 0 20px;
+    }
+
+    .grid_one ul {
+        font-size: 13px;
+    }
+
+    .grid_one {
+        gap: 7px;
+    }
+
+    .flex p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .flex ul {
+        font-size: 16px;
+        text-align: left;
+    }
 
     .wrapper {
         flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .flex {
+        gap: 0;
+        margin-right: 0;
+    }
+
+    .grid_two {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0;
+    }
+
+    .grid_two p {
+        font-size: 14px;
+    }
+
+    .grid_two div:nth-child(2) {
+        grid-column: 2 / span 2;
+    }
+
+    .grid_two div:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .grid_two div:nth-child(4) {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .grid_three {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0;
+        padding: 0;
+    }
+
+    .grid_three p {
+        font-size: 14px;
+    }
+
+    .grid_three div:nth-child(3) {
+        grid-column: 1 / span 2;
+        grid-row: 2;
     }
 }
-
-/* Göra om så att varje grid har sin class/id. Ta bordt #img id:n för jag borde kunna komma åt dem
