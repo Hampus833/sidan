@@ -393,11 +393,39 @@ footer {
 @media (min-width: 800px) and (max-width: 900px) {
 
     p {
-        font-size: 11px;
+        font-size: 10.8px;
+    }
+
+    h1 {
+        font-size: 54px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 22.5px;
+    }
+
+    h3 {
+        font-size: 19.8px;
+    }
+
+    ul {
+        font-size: 10.8px;
+    }
+
+    span {
+        font-size: 13.3px;
     }
 
     .flex {
         gap: 20px;
+    }
+
+    .grid_one div>ul {
+        font-size: 9px;
     }
 
     .grid_three div p {
@@ -408,6 +436,54 @@ footer {
         font-size: 10px;
     }
 }
+
+@media (max-width: 799px) and (min-width: 500px) {
+
+    p {
+        font-size: 1.35vw;
+    }
+
+    h1 {
+        font-size: 6.7vw;
+    }
+
+    a {
+        font-size: 2.2vw;
+    }
+
+    h2 {
+        font-size: 2.8vw;
+    }
+
+    h3 {
+        font-size: 2.5vw;
+    }
+
+    ul {
+        font-size: 1.35vw;
+    }
+
+    span {
+        font-size: 1.7vw;
+    }
+
+    .flex {
+        gap: 20px;
+    }
+
+    .grid_one div>ul {
+        font-size: 1.1vw;
+    }
+
+    .grid_three div p {
+        font-size: 1.25vw;
+    }
+
+    .grid_two div p {
+        font-size: 1.25vw;
+    }
+}
+
 
 @media (min-width: 1200px) {
 
